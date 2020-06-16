@@ -1,0 +1,76 @@
+$color_mainBlack: #363636
+$color_mainWhite: #fff
+$color_gray: #A5A5A5
+$color_lightGray: #D4D4D4
+$color_blue: #5671F6
+
+@mixin flexible () 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    
+body
+    font-family: 'Roboto', sans-serif
+    font-weight: normal
+    
+.header
+    @include flexible ()
+    height: 104px     
+    padding-left: 34px
+    border-bottom: 1px solid $color_lightGray
+
+.line
+    height: 100%
+    width: 1px
+    background-color: $color_lightGray
+    margin-left: 34px
+    
+.search-input
+    background-image: url(../img/search-icon.svg)
+    background-repeat: no-repeat
+    padding-left: 38px
+    background-position: center left
+    border: none
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 21px
+    color: $color_gray
+    margin-left: 34px
+    margin-right: auto
+
+.navigation
+    margin-right: 44px
+    margin-left: auto
+
+    .navigation-link
+        text-decoration: none
+        font-size: 18px
+        line-height: 21px
+        color: $color_mainBlack
+        margin: 0 18px
+
+.button-group
+    height: 100%
+
+    .button
+        height: 100%
+        cursor: pointer
+
+    .sign-up
+        color: $color_blue
+        font-size: 18px
+        line-height: 21px
+        border: none
+        background-color: $color_mainWhite
+        padding: 0 34px
+        border-left: 1px solid $color_lightGray
+
+    .login
+        color: $color_mainWhite
+        font-size: 18px
+        line-height: 21px
+        background-color: $color_blue
+        border: none
+        padding: 0 50px
+        
