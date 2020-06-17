@@ -8,14 +8,21 @@ $color_blue: #5671F6
     display: flex
     justify-content: space-between
     align-items: center
-    
+
+
+*
+    box-sizing: border-box  
+      
 body
     font-family: 'Roboto', sans-serif
     font-weight: normal
     
 .header
     @include flexible ()
-    height: 104px     
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 104px
     padding-left: 34px
     border-bottom: 1px solid $color_lightGray
 
@@ -74,3 +81,177 @@ body
         border: none
         padding: 0 50px
         
+
+
+.film
+    padding: 80px 0
+    border-bottom: 1px solid $color_lightGray
+
+.container
+    max-width: 1130px
+    margin-left: auto
+    margin-right: auto
+        
+.film-wrapper
+    display: flex
+
+.film-trailer
+    display: flex
+    flex-direction: column
+    margin-right: 60px
+
+    .poster
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+        width: 358px
+
+    .trailer-button
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: $color_mainWhite
+        border: 1px solid $color_lightGray
+        border-radius: 0 0 5px 5px
+        padding: 25px 0
+
+        .trailer-button-icon
+            margin-right: 14px
+            cursor: pointer
+
+        .trailer-button-text
+            font-size: 16px
+            line-height: 19px
+            color: $color_blue
+
+.film-text
+    color: $color_mainBlack
+    
+    .film-title
+        font-style: normal
+        font-weight: 900
+        font-size: 36px
+        line-height: 42px
+        margin: 0 0 16px 0
+
+    .film-subtitle
+        display: block
+        /* margin: 32px 0 0 0 */
+        font-size: 18px
+        line-height: 21px
+        color: $color_gray
+
+    .film-discription
+        margin: 
+        font-size: 14px
+        line-height: 150%
+        color: #000000
+        max-width: 514px
+        margin: 50px 0 50px 0
+
+    .about-film
+        display: flex
+        margin-bottom: 50px
+
+        .side
+            margin-right: 40px
+
+            .about-text
+                display: block
+                font-size: 16px;
+                line-height: 19px;
+                margin-bottom: 16px
+                
+
+                .about-text-bold
+                    display: inline-block
+                    width: 100px
+                    vertical-align: top
+                    font-weight: bold
+
+.rating
+    display: flex
+    align-items: center
+
+    .rating-counter
+        width: 100px
+        height: 100px
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 1px solid $color_blue
+        border-radius: 10px
+        margin-right: 28px
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 33px;
+        color: $color_blue
+
+    .rating-description
+
+        .rating-title
+            font-weight: bold
+            font-size: 18px
+            line-height: 21px
+            color: $color_mainBlack
+            margin: 0 0 12px 0
+
+        .rating-text
+            display: block
+            margin-bottom: 7px
+            font-size: 16px;
+            line-height: 19px;
+
+            .rating-text-bold
+                font-weight: bold    
+
+
+.cast
+    padding: 70px 0 100px 0
+
+    .tabs
+        display: flex
+        align-items: center
+        margin-bottom: 60px
+
+        .section-title
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 28px;
+            color: $color_gray
+            margin-right: 30px
+
+        .section-title.active
+            color: $color_mainBlack
+            font-weight: 900
+
+.tabs-content
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+
+    .card
+        display: flex
+        align-items: center
+        flex-basis: 25%
+        margin-bottom: 35px
+
+        .card-image
+            width: 100px
+            height: 100px
+            object-fit: cover
+            border-radius: 50%
+            margin-right: 20px
+
+        .card-text    
+            
+            .name
+                font-weight: bold
+                font-size: 16px
+                line-height: 19px
+                color: $color_blue
+                margin: 0 0 6px 0
+            .en-name
+                font-size: 16px
+                line-height: 19px
+                color: $color_gray
+                margin: 0 0 6px 0
