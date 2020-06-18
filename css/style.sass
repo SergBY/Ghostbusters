@@ -2,6 +2,7 @@ $color_mainBlack: #363636
 $color_mainWhite: #fff
 $color_gray: #A5A5A5
 $color_lightGray: #D4D4D4
+$color_backGround_Gray: #F3F3F3
 $color_blue: #5671F6
 
 @mixin flexible () 
@@ -255,3 +256,35 @@ body
                 line-height: 19px
                 color: $color_gray
                 margin: 0 0 6px 0
+
+.news
+    background-color: $color_backGround_Gray
+    padding: 70px 0 100px 0
+
+.section-news-title
+    font-weight: 900
+    color: $color_mainBlack
+    margin-bottom: 65px
+    
+    
+.news-cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+
+    .news-card
+        flex-basis: 23%
+        background-color: $color_mainWhite
+        padding: 30px
+        border-radius: 5px
+
+        .news-date
+            font-size: 14px
+            line-height: 16px
+
+        .news-title
+            font-weight: 900
+            font-size: 14px
+            line-height: 16px
+            color: black
+            margin-top: 14px
