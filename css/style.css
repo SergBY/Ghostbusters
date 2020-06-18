@@ -27,6 +27,8 @@ body {
 }
 
 .line {
+  content: "";
+  display: inline-block;
   height: 100%;
   width: 1px;
   background-color: #D4D4D4;
@@ -63,6 +65,9 @@ body {
 
 .button-group {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .button-group .button {
@@ -87,6 +92,28 @@ body {
   background-color: #5671F6;
   border: none;
   padding: 0 50px;
+}
+
+.mobile-buttons {
+  display: none;
+}
+
+.m-menu-button, .search-button {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.m-menu-button .menu-line, .search-button .menu-line {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 16px;
+  margin: 3px 0px;
+  -ms-flex-preferred-size: 16px;
+      flex-basis: 16px;
+  border-radius: 40px;
 }
 
 .film {
@@ -367,5 +394,183 @@ body {
   line-height: 16px;
   color: black;
   margin-top: 14px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 960px;
+  }
+  .tabs-content .card .card-image {
+    width: 70px;
+    height: 70px;
+  }
+  .header {
+    height: 90px;
+    padding-left: 20px;
+  }
+  .button-group .sign-up {
+    padding: 0 20px;
+  }
+  .navigation {
+    margin-right: 20px;
+  }
+  .search-input {
+    margin-left: 20px;
+  }
+  .navigation .navigation-link {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  .line {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 760px;
+  }
+  .navigation {
+    display: none;
+  }
+  .film-text .film-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .film-text .film-subtitle {
+    margin-bottom: 20px;
+  }
+  .film-text .film-discription {
+    margin: 20px 0 30px 0;
+  }
+  .film-text .about-film {
+    margin-bottom: 30px;
+  }
+  .film-text .about-film .side .about-text .about-text-bold {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .tabs-content .card .card-image {
+    width: 100px;
+    height: 100px;
+  }
+  .tabs-content .card {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .news-cards .news-card {
+    -ms-flex-preferred-size: 48%;
+        flex-basis: 48%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 560px;
+  }
+  .header {
+    height: 80px;
+    padding-right: 2.5%;
+    padding-left: 2.5%;
+  }
+  .film {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .film-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .film-text {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 30px;
+  }
+  .cast {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+  .news {
+    padding: 50px 0 70px 0;
+  }
+  .button-group {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .search-input {
+    display: none;
+  }
+  .mobile-buttons {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+  .film-text {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    margin-bottom: 0;
+  }
+  .film-trailer {
+    width: 100%;
+  }
+  .film-trailer .poster {
+    width: 100%;
+  }
+  .film-text .film-title {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+    margin-top: 30px;
+  }
+  .film-text .film-subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 26px;
+  }
+  .film-text .film-discription {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+  .film-text .about-film {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .film-text .about-film .side .about-text .about-text-bold {
+    display: inline-block;
+  }
+  .tabs-content .card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .tabs-content .card .card-image {
+    width: 60px;
+    height: 60px;
+  }
+  .cast .tabs {
+    margin-bottom: 35px;
+  }
+  .cast {
+    padding-bottom: 50px;
+  }
+  .news-cards .news-card {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
