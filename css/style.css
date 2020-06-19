@@ -12,18 +12,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 104px;
   padding-left: 34px;
   border-bottom: 1px solid #D4D4D4;
+}
+
+.m-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .line {
@@ -164,6 +171,8 @@ body {
   border: 1px solid #D4D4D4;
   border-radius: 0 0 5px 5px;
   padding: 25px 0;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .film-trailer .trailer-button .trailer-button-icon {
@@ -474,6 +483,77 @@ body {
     padding-right: 2.5%;
     padding-left: 2.5%;
   }
+  .no-scrolle {
+    overflow: hidden;
+  }
+  .m-menu {
+    display: none;
+    height: calc(100% - 80px);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    background-color: #5671F6;
+  }
+  .m-menu.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  .button-group {
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .search-input {
+    margin: 0;
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-image: none;
+  }
+  .navigation .navigation-link {
+    color: #fff;
+    margin: 0 0 18px 0;
+  }
+  .navigation .navigation-link:last-child {
+    margin-bottom: 0;
+  }
+  .button-group .sign-up {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    margin-bottom: 30px;
+  }
   .film {
     padding-top: 50px;
     padding-bottom: 60px;
@@ -495,17 +575,12 @@ body {
   .news {
     padding: 50px 0 70px 0;
   }
-  .button-group {
-    display: none;
-  }
   .line {
-    display: none;
-  }
-  .search-input {
     display: none;
   }
   .mobile-buttons {
     display: block;
+    margin-left: auto;
   }
 }
 
