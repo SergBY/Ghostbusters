@@ -255,32 +255,32 @@ body
     align-items: center
     flex-wrap: wrap
 
-    .card
-        display: flex
-        align-items: center
-        flex-basis: 25%
-        margin-bottom: 35px
+.card
+    display: flex
+    align-items: center
+    flex-basis: 25%
+    margin-bottom: 35px
 
-        .card-image
-            width: 100px
-            height: 100px
-            object-fit: cover
-            border-radius: 50%
-            margin-right: 20px
+.card-image
+    width: 100px
+    height: 100px
+    object-fit: cover
+    border-radius: 50%
+    margin-right: 20px
 
-        .card-text    
+.card-text    
             
-            .name
-                font-weight: bold
-                font-size: 16px
-                line-height: 19px
-                color: $color_blue
-                margin: 0 0 6px 0
-            .en-name
-                font-size: 16px
-                line-height: 19px
-                color: $color_gray
-                margin: 0 0 6px 0
+    .name
+    font-weight: bold
+    font-size: 16px
+    line-height: 19px
+    color: $color_blue
+    margin: 0 0 6px 0
+.en-name
+    font-size: 16px
+    line-height: 19px
+    color: $color_gray
+    margin: 0 0 6px 0
 
 .news
     background-color: $color_backGround_Gray
@@ -297,22 +297,35 @@ body
     flex-wrap: wrap
     justify-content: space-between
 
-    .news-card
-        flex-basis: 23%
-        background-color: $color_mainWhite
-        padding: 30px
-        border-radius: 5px
+.news-card
+    flex-basis: 23%
+    background-color: $color_mainWhite
+    padding: 30px
+    border-radius: 5px
 
-        .news-date
-            font-size: 14px
-            line-height: 16px
+.news-date
+    font-size: 14px
+    line-height: 16px
 
-        .news-title
-            font-weight: 900
-            font-size: 14px
-            line-height: 16px
-            color: black
-            margin-top: 14px
+.news-title
+    font-weight: 900
+    font-size: 14px
+    line-height: 16px
+    color: black
+    margin-top: 14px
+
+.button-next
+    display: none
+    background-color: transparent
+    border: none
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 99
+    cursor: pointer
+
+
 
 @media ( max-width: 1200px  )
     .container
@@ -455,6 +468,13 @@ body
 
     .news
         padding: 50px 0 70px 0
+
+    .news-card
+        max-width: 90%
+
+    .button-next
+                display: block
+
 
     .line
         display: none
